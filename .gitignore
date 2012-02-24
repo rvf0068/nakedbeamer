@@ -5,3 +5,4 @@
 *.snm
 *.toc
 example.pdf
+/auto/beamerthemenaked.el

@@ -57,18 +57,25 @@
 %	\begin{tikzpicture}[overlay]
 %		\node[inner sep=0pt] at (5.39,-4.45) {\includegraphics[width=1.01\paperwidth]{background_c3}};
 %	\end{tikzpicture}
-   ~
+  \null
+  \vfill
+  \begin{center}
+    {\Large\inserttitle} \\
+    \insertsubtitle
+    
+    \vfill            
+                
+    {\small \bfseries\insertauthor}
 
-	\vskip2cm
-	\begin{center}
-		{\Large\inserttitle} \\
-		\insertsubtitle
+    \vfill
 
-		\vskip1.6cm\par
-		{\small \bf \insertauthor} \par
-		{\tiny \insertinstitute} \par
-		{\tiny \insertdate}
-	\end{center}
+    {\tiny \insertinstitute}
+
+    \vfill
+
+    {\tiny \insertdate}
+  \end{center}
+  \vfill
 }
 
 %%% An imageframe has one fullscreen image as background
