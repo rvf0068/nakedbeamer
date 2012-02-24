@@ -29,6 +29,9 @@
 % default font choices
 \usepackage{venturis}
 
+%
+\usepackage{fancybox}
+
 \renewcommand{\tiny}{\fontsize{7pt}{8pt}\selectfont}
 \renewcommand{\scriptsize}{\fontsize{9pt}{12pt}\selectfont}
 \renewcommand{\footnotesize}{\fontsize{10pt}{12pt}\selectfont}
@@ -60,10 +63,18 @@
   \null
   \vfill
   \begin{center}
-    {\Large\inserttitle} \\
-    \insertsubtitle
+    {\Ovalbox{%
+        \begin{minipage}{0.8\linewidth}
+          \Large
+          \centering
+          \inserttitle
+          \insertsubtitle
+        \end{minipage}
+        }} 
     
     \vfill            
+
+    \vfill
                 
     {\small \bfseries\insertauthor}
 
