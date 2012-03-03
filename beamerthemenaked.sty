@@ -110,11 +110,11 @@
 
 %%% A defnframe defines a word or phrase
 \newenvironment{defnframe}[1]
-	{
+	{%
 		\begin{frame}
       \usebeamerfont{title}\usebeamercolor[fg]{box title}\Large #1: \\
 		\vskip0.7cm
-		\usebeamercolor[fg]{normal text}\Large\itshape
+		\usebeamercolor[fg]{normal text}\Large\itshape%
 	}{\end{frame}}
 
 \newcommand{\emptyslide}{\begin{frame}[plain]\end{frame}}
