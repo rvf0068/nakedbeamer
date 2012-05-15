@@ -29,9 +29,6 @@
 % default font choices
 \usepackage{venturis}
 
-%
-\usepackage{fancybox}
-
 \renewcommand{\tiny}{\fontsize{7pt}{8pt}\selectfont}
 \renewcommand{\scriptsize}{\fontsize{9pt}{12pt}\selectfont}
 \renewcommand{\footnotesize}{\fontsize{10pt}{12pt}\selectfont}
@@ -54,6 +51,9 @@
 
 \setbeamertemplate{blocks}[rounded]
 
+\tikzstyle{mybox} = [draw=red, fill=blue!20, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+
 \setbeamertemplate{title page}
 {
 % background image on title page:
@@ -63,14 +63,16 @@
   \null
   \vfill
   \begin{center}
-    {\Ovalbox{%
+    \begin{tikzpicture}
+      \node[mybox](box){%
         \begin{minipage}{0.8\linewidth}
           \Large
           \centering
           \inserttitle
           \insertsubtitle
         \end{minipage}
-        }} 
+        };
+    \end{tikzpicture}
     
     \vfill            
 
