@@ -51,22 +51,17 @@
 
 \setbeamertemplate{blocks}[rounded]
 
-\tikzstyle{mybox} = [draw=red, fill=blue!20, very thick,
-    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{mybox} = [draw, very thick, rectangle, rounded corners]
 
 \setbeamertemplate{title page}
 {
-% background image on title page:
-%	\begin{tikzpicture}[overlay]
-%		\node[inner sep=0pt] at (5.39,-4.45) {\includegraphics[width=1.01\paperwidth]{background_c3}};
-%	\end{tikzpicture}
   \null
   \vfill
   \begin{center}
     \begin{tikzpicture}
       \node[mybox](box){%
         \begin{minipage}{0.8\linewidth}
-          \Large
+          \fontsize{25}{27}\selectfont
           \centering
           \inserttitle
           \insertsubtitle
